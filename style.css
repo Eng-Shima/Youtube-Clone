@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Roboto","Arial",sans-serif;
+    background-color: #f9f9f9;
+}
+/* start header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    /* border: 1px solid red; */
+    padding: 0 16px;
+    width: 100%;
+    background-color: white;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.left-section img {
+    width: 46%;
+    padding-left: 16px;
+}
+.mid-section {
+    display: flex;
+    align-items: center;
+    margin-left: -9%;
+}
+.mid-section form {
+    display: flex;
+    width: 628px;
+    height: 40px;
+}
+.mid-section input {
+    width: 100%;
+    border-radius: 2px 0 0 2px;
+    padding: 12px;
+    font-size: 1.6rem;  /* 1 rem = 10px customized in HTML element */
+    border: 1px solid #d3d3d3;
+    border-right: none;
+}
+.mid-section button {
+    width: 64px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 2px 2px 0;
+    padding-top: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.mid-section button:hover {
+    border-color: #c6c6c6;
+    background-color: #f0f0f0;
+}
+.mid-section .mic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.right-section a {
+    text-decoration: none;
+    color: black;
+    padding-right: 18px;
+}
+/* End header */
+
+/* start content-area - sec all- */
+.content-area {
+    height: calc(100vh - 56px);
+    display: flex;
+    background-color: #f9f9f9;
+}
+/* End content-area - sec all- */
+
+/* start aside */
+aside {
+    width: 280px;
+    height: calc(100vh - 56px);
+    background-color: white;
+    padding-right: 8px;
+    overflow-y: auto;   /* overflow-y: auto;   it menas automatically create a scroll when the aside elements increase by scrollling down */
+}
+nav {
+    width: 100%; /* it means 100% of the aside sextion , inhert from it , as the aside is the father div*/
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* as the a tags (links) are inline elements , so it comes at the same row by default*/
+    margin: 15px 0;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: black;
+}
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.nav-link span {
+    margin-left: 24px;
+    font-size: 1.4rem;
+    line-height: 2em;
+    font-weight: 400;
+    color: #030303;
+}
+.active {
+    background-color: #e5e5e5;
+}
+#active-span {
+    font-weight: 600;
+}
+hr {
+    margin: 10px 0;
+    color: rgba(221, 221, 221, 0.721);
+}
+nav p {
+    font-size: 1.4rem;
+    color: #606060;
+    font-weight: 500;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+.channel-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+/* End aside */
+
+/* start main section */
+.main-contenet {
+    height: calc(100vh - 56px);
+    width: 100%;
+    padding: 35px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;   /*to make slider automatically when the videos increase by scrolling down at the page*/
+}
+.videos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.video {
+    width: 230px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.thumbnail {
+    width: 100%;    /*cuz it's the son of the father div: video*/
+    height: 177px;
+    margin-bottom: 12px;
+}
+.video-details {
+    display: flex;
+}
+.creator-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.title a {
+    text-decoration: none;
+}
+.video-title {
+    color: rgb(3, 3, 3);
+    font-size: 1.6rem;
+    max-width: 278px;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /*to clamp or cut the words if the video title was more than 2 lines*/
+    -webkit-box-orient: vertical;   /*to put the 2 lines in a vertical shape*/
+}
+/* End main section */
+
